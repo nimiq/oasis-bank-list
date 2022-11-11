@@ -1,0 +1,19 @@
+{
+  "name": "oasis-bank-list",
+  "version": "1.0.0",
+  "description": "This package will allow one to fetch the updated list of banks supported by OASIS as a JSON file, as well as the list of supported countries.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yukiioz/oasis-bank-list.git"
+  },
+  "author": "Yukiioz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yukiioz/oasis-bank-list/issues"
+  },
+  "homepage": "https://github.com/Yukiioz/oasis-bank-list#readme"
+}
