@@ -14,16 +14,14 @@ export enum BANK_NETWORK {
     TIPS = 'tips',
 }
 
-type DirectionSupport = {
-    inbound: SEPA_INSTANT_SUPPORT,
-    outbound: SEPA_INSTANT_SUPPORT,
-}
-
 export type Bank = {
     name: string,
     BIC: string,
     country: string, // ISO 3166-1 alpha-2 country code
     support: AtLeastOne<{
-        [key in BANK_NETWORK]: DirectionSupport
+        [key in BANK_NETWORK]: {
+            inbound: SEPA_INSTANT_SUPPORT,
+            outbound: SEPA_INSTANT_SUPPORT,
+        }
     }>,
 }
