@@ -1,3 +1,5 @@
+type AtLeastOne<T, U = {[K in keyof T]: Pick<T, K> }> = Partial<T> & U[keyof U]
+
 export enum SEPA_INSTANT_SUPPORT {
     FULL = 'full', // all accounts support it
     PARTIAL = 'partial', // some accounts support it, some don't, in the same bank
@@ -21,11 +23,7 @@ export type Bank = {
     name: string,
     BIC: string,
     country: string, // ISO 3166-1 alpha-2 country code
-    support: {
-        rt1: DirectionSupport,
-        tips?: DirectionSupport,
-    } | {
-        rt1?: DirectionSupport,
-        tips: DirectionSupport,
-    },
+    support: AtLeastOne<{
+        [key in BANK_NETWORK]: DirectionSupport
+    }>,
 }
