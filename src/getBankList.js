@@ -15,7 +15,8 @@ const DATA_FOLDER_PATH = path.relative('.', dirname);
 const EBA_RT1_XLSX_FILE_PATH = path.join(DATA_FOLDER_PATH, 'generated/EBA_RT1.xlsx');
 const EBA_RT1_JSON_FILE_PATH = path.join(DATA_FOLDER_PATH, 'generated/EBA_RT1.json');
 
-const CUSTOM_JSON_FILE_PATH = path.join(DATA_FOLDER_PATH, 'customBankList.json');
+// const CUSTOM_JSON_FILE_PATH = path.join(DATA_FOLDER_PATH, 'customBankList.json');
+const CUSTOM_JSON_FILE_PATH = 'https://raw.githubusercontent.com/nimiq/oasis-bank-list/main/src/customBankList.json';
 const OUTPUT_JSON_FILE_PATH = path.join(DATA_FOLDER_PATH, 'generated/bankList.json');
 const OUTPUT_JSON_COUNTRIES_FILE_PATH = path.join(DATA_FOLDER_PATH, 'generated/supportedCountries.json');
 
