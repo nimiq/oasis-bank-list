@@ -10,7 +10,7 @@ import { fileURLToPath } from 'url';
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
-const DATA_FOLDER_PATH = path.join(dirname, './');
+const DATA_FOLDER_PATH = path.relative('.', dirname);
 
 const EBA_RT1_XLSX_FILE_PATH = path.join(DATA_FOLDER_PATH, 'generated/EBA_RT1.xlsx');
 const EBA_RT1_JSON_FILE_PATH = path.join(DATA_FOLDER_PATH, 'generated/EBA_RT1.json');
